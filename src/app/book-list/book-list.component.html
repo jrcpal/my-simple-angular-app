@@ -1,0 +1,10 @@
+<div>
+  <label for='filter'>Filter by Title</label>
+  <input type='text' id='filter' [(ngModel)]='filter'>
+</div>
+
+<ul>
+  <li *ngFor='let book of books | filter: filter'>
+    {{book.title}} by {{book.author}} {{book.year}}
+  </li>
+</ul>
